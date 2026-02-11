@@ -1,0 +1,14 @@
+## XezHack Language File - Bahasa Indonesia
+pack.name=XezHack RP
+pack.description=Resource Pack untuk Addon XezHack. Berisi tekstur dan elemen UI kustom untuk pengalaman terbaik. Dibuat oleh @Xez.
+
+ui.xezhack.menu=Menu XezHack
+ui.xezhack.run_command=Jalankan Perintah
+ui.xezhack.history=Riwayat Perintah
+ui.xezhack.about=Tentang Pembuat
+ui.xezhack.confirm=Konfirmasi
+ui.xezhack.cancel=Batal
+ui.xezhack.yes=Ya, Jalankan
+ui.xezhack.back=Kembali ke Menu
+
+item.xezhack_rc:item.name=Item XezHack

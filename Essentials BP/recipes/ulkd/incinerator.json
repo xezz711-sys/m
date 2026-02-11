@@ -1,0 +1,29 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:incinerator"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:lava_bucket",
+			"Y": "minecraft:iron_ingot",
+			"O": "minecraft:stone_button"
+		},
+		"pattern": [
+			"OYO",
+			"YXY",
+			"OYO"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:incinerator",
+				"count": 1
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

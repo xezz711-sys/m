@@ -1,0 +1,26 @@
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:wood_paxel"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:wooden_pickaxe",
+			"Y": "minecraft:wooden_axe",
+			"O": "minecraft:wooden_shovel"
+		},
+		"pattern": [
+			"XOY"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:paxel_wooden",
+				"count": 1
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

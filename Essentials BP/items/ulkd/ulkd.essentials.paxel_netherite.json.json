@@ -1,0 +1,60 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ulkd_ess:paxel_netherite",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:display_name": {
+        "value": "Netherite Paxel"
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:icon": "unlinked.essentials.paxel_netherite",
+      "minecraft:damage": {
+        "value": 6
+      },
+      "minecraft:digger": {
+        "use_efficiency": true,
+        "destroy_speeds": [
+          {
+            "block": {
+              "tags": "q.any_tag('minecraft:is_hoe_item_destructible', 'minecraft:is_axe_item_destructible', 'minecraft:is_shovel_item_destructible', 'minecraft:is_sword_item_destructible') || (q.any_tag('minecraft:is_pickaxe_item_destructible'))"
+            },
+            "speed": 9
+          }
+        ]
+      },
+      "minecraft:enchantable": {
+        "slot": "pickaxe",
+        "value": 15
+      },
+      "minecraft:durability": {
+        "max_durability": 2031
+      },
+      "minecraft:repairable": {
+        "repair_items": [
+          {
+            "items": [
+              "minecraft:netherite_ingot"
+            ],
+            "repair_amount": "query.max_durability * 0.33"
+          }
+        ]
+      },
+      "minecraft:tags": {
+        "tags": [
+          "minecraft:digger",
+          "minecraft:is_tool",
+          "minecraft:is_pickaxe",
+          "minecraft:is_axe",
+          "minecraft:is_shovel",
+          "minecraft:is_hoe",
+          "minecraft:netherite_tier"
+        ]
+      }
+    }
+  }
+}

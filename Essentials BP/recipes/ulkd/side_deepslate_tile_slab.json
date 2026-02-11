@@ -1,0 +1,26 @@
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:side.deepslate.tile.slab"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:deepslate_tiles"
+		},
+		"pattern": [
+			"X",
+			"X",
+			"X"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:side.deepslate.tile.slab",
+				"count": 6
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:side.dark.prismarine.slab"
+		},
+		"priority": 2,
+		"key": {
+            "X": {
+                "item": "minecraft:prismarine",
+                "data": 1
+            }
+		},
+		"pattern": [
+			"X",
+			"X",
+			"X"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:side.dark.prismarine.slab",
+				"count": 6
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

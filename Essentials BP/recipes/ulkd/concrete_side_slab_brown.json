@@ -1,0 +1,26 @@
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:slab.side.concrete.brown"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:brown_concrete"
+		},
+		"pattern": [
+			"X",
+			"X",
+			"X"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:slab.side.concrete.brown",
+				"count": 6
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:slab.side.concrete.lime"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:lime_concrete"
+		},
+		"pattern": [
+			"X",
+			"X",
+			"X"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:slab.side.concrete.lime",
+				"count": 6
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

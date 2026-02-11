@@ -1,0 +1,26 @@
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:side.polished.blackstone.brick.slab"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:polished_blackstone_bricks"
+		},
+		"pattern": [
+			"X",
+			"X",
+			"X"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:side.polished.blackstone.brick.slab",
+				"count": 6
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

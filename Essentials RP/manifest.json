@@ -1,0 +1,73 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "pack.name",
+        "description": "pack.description",
+        "uuid": "24188c69-3fc5-47a7-b41b-23847c67adf5",
+        "pack_scope": "world",
+        "version": [
+            1,
+            0,
+            24
+        ],
+        "min_engine_version": [
+            1,
+            20,
+            41
+        ]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "1b7fa8b0-037c-4764-b597-f4e81b31e983",
+            "version": [
+                1,
+                0,
+                24
+            ]
+        }
+    ],
+    "metadata": {
+        "product_type": "addon"
+    },
+    "dependencies": [
+        {
+            "version": [
+                1,
+                0,
+                24
+            ],
+            "uuid": "47a58c9a-1d18-4761-9323-35a01254ef67"
+        }
+    ],
+    "settings": [
+        {
+            "type": "label",
+            "text": " "
+        },
+        {
+            "type": "label",
+            "text": " "
+        },
+        {
+            "type": "label",
+            "text": "-------------------------------------------------------------"
+        },
+        {
+            "type": "label",
+            "text": "    \ue100 \u00a7o\u00a79@MDF \ue100"
+        },
+        {
+            "type": "label",
+            "text": "NOTE"
+        },
+        {
+            "type": "label",
+            "text": "Join my Telegram to get free DLC addon on Minecraft bedrock: https://t.me/+yuVtyYmUW2VmZDFl"
+        },
+        {
+            "type": "label",
+            "text": "-------------------------------------------------------------"
+        }
+    ]
+}

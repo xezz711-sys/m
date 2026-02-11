@@ -1,0 +1,26 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:portable.ender.chest"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:ender_chest"
+		},
+		"pattern": [
+			"XX",
+			"XX"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:portable.ender.chest",
+				"count": 1
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

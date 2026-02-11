@@ -1,0 +1,15 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ulkd_ess:checkpoint"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"texture": "unlinked.essentials:checkpoint"
+			}
+		},
+		"events": {}
+	}
+}

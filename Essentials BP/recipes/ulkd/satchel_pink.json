@@ -1,0 +1,25 @@
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:satchel_pink"
+		},
+		"priority": 2,
+		"key": {
+			"X": "ulkd_ess:satchel",
+			"Y": "minecraft:pink_dye"
+		},
+		"pattern": [
+			"XY"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:satchel_pink",
+				"count": 1
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

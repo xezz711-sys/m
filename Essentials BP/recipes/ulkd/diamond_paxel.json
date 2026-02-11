@@ -1,0 +1,26 @@
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:diamond_paxel"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:diamond_pickaxe",
+			"Y": "minecraft:diamond_axe",
+			"O": "minecraft:diamond_shovel"
+		},
+		"pattern": [
+			"XOY"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:paxel_diamond",
+				"count": 1
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

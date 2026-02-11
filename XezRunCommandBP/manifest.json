@@ -1,0 +1,41 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "pack.description",
+    "name": "XezHackRunCommand",
+    "uuid": "6a434771-87bf-4f6d-927e-8c3e6205d1a8",
+    "version": [1, 1, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "1b9d4e5f-32c0-4e1a-85b9-7d6f540c3e2b",
+      "version": [1, 1, 0]
+    },
+    {
+      "type": "script",
+      "uuid": "c9e0f1a2-58d3-49b4-ab6c-5f7e8a9d0b1c",
+      "version": [1, 1, 0],
+      "entry": "scripts/xezhack_main.js",
+      "language": "javascript"
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "f2a5b6c7-d8e9-40f0-81a2-3b4c5d5e6f7a",
+      "version": [1, 1, 0]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "1.13.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "1.2.0"
+    }
+  ],
+  "metadata": {
+    "product_type": "addon"
+  }
+}

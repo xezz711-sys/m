@@ -1,0 +1,29 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:sorting_stick"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:diamond",
+			"Y": "minecraft:gold_nugget",
+			"Z": "minecraft:stick"
+		},
+		"pattern": [
+			" X ",
+			"YZY",
+			"YZY"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:sorting_stick",
+				"count": 1
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

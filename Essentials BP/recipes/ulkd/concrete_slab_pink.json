@@ -1,0 +1,24 @@
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:slab.concrete.pink"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:pink_concrete"
+		},
+		"pattern": [
+			"XXX"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:slab.concrete.pink",
+				"count": 6
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

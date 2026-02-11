@@ -1,0 +1,26 @@
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:iron_paxel"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:iron_pickaxe",
+			"Y": "minecraft:iron_axe",
+			"O": "minecraft:iron_shovel"
+		},
+		"pattern": [
+			"XOY"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:paxel_iron",
+				"count": 1
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

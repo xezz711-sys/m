@@ -1,0 +1,42 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.20.71",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ulkd_ess:fake.bamboo.planks",
+			"menu_category": {
+				"category": "construction",
+				"is_hidden_in_commands": false
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.ulkd_ess.fake.block",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "bamboo_planks",
+					"render_method": "alpha_test",
+					"face_dimming": true,
+					"ambient_occlusion": true
+				}
+			},
+			"minecraft:selection_box": true,
+			"minecraft:collision_box": {
+				"size": [
+					0,
+					0,
+					0
+				],
+				"origin": [
+					0,
+					0,
+					0
+				]
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.5
+			},
+			"minecraft:display_name": "Fake Bamboo Planks"
+		},
+		"events": {}
+	}
+}

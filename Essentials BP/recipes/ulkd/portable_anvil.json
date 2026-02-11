@@ -1,0 +1,25 @@
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:portable.anvil"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:anvil"
+		},
+		"pattern": [
+			"XX",
+			"XX"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:portable.anvil",
+				"count": 1
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

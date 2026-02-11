@@ -1,0 +1,87 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.20.71",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ulkd_ess:slab.concrete.yellow",
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:facing_direction"
+					],
+					"y_rotation_offset": 180
+				}
+			},
+			"menu_category": {
+				"category": "construction",
+				"is_hidden_in_commands": false
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.ulkd_ess.slab",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "yellow_concrete",
+					"render_method": "alpha_test",
+					"face_dimming": true,
+					"ambient_occlusion": true
+				}
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					8,
+					-8
+				],
+				"size": [
+					16,
+					8,
+					16
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					8,
+					-8
+				],
+				"size": [
+					16,
+					8,
+					16
+				]
+			},
+			"minecraft:display_name": "Yellow Concrete Slab",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.5
+			}
+		},
+		"events": {},
+		"permutations": [
+			{
+				"condition": "q.block_state('minecraft:facing_direction') == 'up'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:facing_direction') != 'up'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							180
+						]
+					}
+				}
+			}
+		]
+	}
+}

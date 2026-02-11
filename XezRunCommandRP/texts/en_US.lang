@@ -1,0 +1,14 @@
+## XezHack Language File - English
+pack.name=XezHack RP
+pack.description=Resource Pack for XezHack Addon. Contains custom textures and UI elements for the best experience. Made by @Xez.
+
+ui.xezhack.menu=XezHack Menu
+ui.xezhack.run_command=Run Command
+ui.xezhack.history=Command History
+ui.xezhack.about=About Author
+ui.xezhack.confirm=Confirm
+ui.xezhack.cancel=Cancel
+ui.xezhack.yes=Yes, Run
+ui.xezhack.back=Back to Menu
+
+item.xezhack_rc:item.name=XezHack Item

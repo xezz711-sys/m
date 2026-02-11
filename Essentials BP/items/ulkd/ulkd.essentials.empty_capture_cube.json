@@ -1,0 +1,16 @@
+{
+    "format_version": "1.20.30",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ulkd_ess:empty_capture_cube"
+        },
+        "components": {
+            "minecraft:max_stack_size": 64,
+            "minecraft:icon": {
+                "texture": "unlinked.essentials:capture_cube_empty"
+            }
+
+        },
+        "events": {}
+    }
+}

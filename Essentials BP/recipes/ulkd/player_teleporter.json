@@ -1,0 +1,29 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:player_teleporter"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:ender_pearl",
+			"Y": "minecraft:diamond",
+			"O": "minecraft:compass"
+		},
+		"pattern": [
+			"YXY",
+			"XOX",
+			"YXY"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:player_teleporter",
+				"count": 1
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

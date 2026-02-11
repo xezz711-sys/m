@@ -1,0 +1,8 @@
+{
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "xezhack_rc:item": { "textures": "textures/xezhack/item" }
+  }
+}
+
+

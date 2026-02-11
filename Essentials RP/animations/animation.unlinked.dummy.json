@@ -1,0 +1,10 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.unlinked_essentials.dummy": {
+			// Empty animation for sending data to the client
+			// DO NOT REMOVE
+			"animation_length": 0.1
+		}
+	}
+}

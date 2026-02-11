@@ -1,0 +1,27 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:fake.acacia.wood"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:acacia_log"
+		},
+		"pattern": [
+			"X X",
+			" X ",
+			"X X"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:fake.acacia.wood",
+				"count": 2
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

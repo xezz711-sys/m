@@ -1,0 +1,28 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:large_air_bladder"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:leather",
+			"Y": "minecraft:dark_oak_button"
+		},
+		"pattern": [
+			"XYX",
+			"X X",
+			"XXX"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:large_air_bladder",
+				"count": 1
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:gray_concrete"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:water_bucket",
+			"Y": "minecraft:gray_concrete_powder"
+		},
+		"pattern": [
+			"YYY",
+			"YXY",
+			"YYY"
+		],
+		"result": [
+			{
+				"item": "minecraft:gray_concrete",
+				"count": 8
+			},
+			{
+				"item": "minecraft:bucket",
+				"count": 1
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

@@ -1,0 +1,19 @@
+# Minecraft Bedrock
+input/
+output/
+debug/
+build/
+.vscode/
+
+# Node
+node_modules/
+package-lock.json
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Agent
+.gemini/
+.agent/
+brain/

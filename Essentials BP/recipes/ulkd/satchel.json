@@ -1,0 +1,28 @@
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:satchel"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:bundle",
+			"Y": "minecraft:ender_eye",
+			"Z": "minecraft:string"
+		},
+		"pattern": [
+			"ZZZ",
+			"XYX",
+			"XXX"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:satchel",
+				"count": 1
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

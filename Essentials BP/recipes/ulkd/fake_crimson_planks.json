@@ -1,0 +1,27 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:fake.crimson.planks"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:crimson_planks"
+		},
+		"pattern": [
+			"X X",
+			" X ",
+			"X X"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:fake.crimson.planks",
+				"count": 2
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

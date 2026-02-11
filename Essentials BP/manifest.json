@@ -1,0 +1,91 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "pack.name",
+        "description": "pack.description",
+        "uuid": "47a58c9a-1d18-4761-9323-35a01254ef67",
+        "version": [
+            1,
+            0,
+            24
+        ],
+        "min_engine_version": [
+            1,
+            20,
+            71
+        ]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "7a72cf2e-bfc9-4b54-8e57-0c747895c326",
+            "version": [
+                1,
+                0,
+                24
+            ]
+        },
+        {
+            "type": "script",
+            "language": "javascript",
+            "uuid": "b0e3b5f1-5516-4353-9aeb-6f26c0ba5e39",
+            "entry": "scripts/unlinked/unlinked.essentials.js",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ],
+    "metadata": {
+        "product_type": "addon"
+    },
+    "dependencies": [
+        {
+            "uuid": "24188c69-3fc5-47a7-b41b-23847c67adf5",
+            "version": [
+                1,
+                0,
+                24
+            ]
+        },
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.14.0"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "1.2.0"
+        }
+    ],
+    "settings": [
+        {
+            "type": "label",
+            "text": " "
+        },
+        {
+            "type": "label",
+            "text": " "
+        },
+        {
+            "type": "label",
+            "text": "-------------------------------------------------------------"
+        },
+        {
+            "type": "label",
+            "text": "    \ue100 \u00a7o\u00a79@MDF \ue100"
+        },
+        {
+            "type": "label",
+            "text": "NOTE"
+        },
+        {
+            "type": "label",
+            "text": "Join my Telegram to get free DLC addon on Minecraft bedrock: https://t.me/+yuVtyYmUW2VmZDFl"
+        },
+        {
+            "type": "label",
+            "text": "-------------------------------------------------------------"
+        }
+    ]
+}

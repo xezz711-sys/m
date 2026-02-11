@@ -1,0 +1,27 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:fake.gray.wool"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:gray_wool"
+		},
+		"pattern": [
+			"X X",
+			" X ",
+			"X X"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:fake.gray.wool",
+				"count": 2
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

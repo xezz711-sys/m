@@ -1,0 +1,28 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:elevator"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:ender_pearl",
+			"Y": "minecraft:scaffolding"
+		},
+		"pattern": [
+			" X ",
+			"XYX",
+			" X "
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:elevator",
+				"count": 1
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

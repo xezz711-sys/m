@@ -1,0 +1,25 @@
+{
+    "format_version": "1.21.40",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ulkd_ess:empty_bucket"
+        },
+        "components": {
+            "minecraft:max_stack_size": 16,
+            "minecraft:display_name": {
+                "value": "Big Empty Bucket"
+            },
+            "minecraft:icon": "unlinked.essentials:bucket_empty",
+            "minecraft:tags": {
+                "tags": [
+                    "ulkd_ess:bucket_empty",
+                    "ulkd_ess:bucket_transform_ulkd_ess:water_bucket",
+                    "ulkd_ess:bucket_transform_ulkd_ess:lava_bucket"
+                ]
+            },
+            "minecraft:custom_components": [
+                "ulkd_ess:big_bucket"
+            ]
+        }
+    }
+}

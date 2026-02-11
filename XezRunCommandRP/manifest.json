@@ -1,0 +1,28 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "pack.description",
+    "name": "XezHackRunCommand",
+    "uuid": "f2a5b6c7-d8e9-40f0-81a2-3b4c5d5e6f7a",
+    "pack_scope": "world",
+    "version": [1, 1, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "description": "Xez Resource Pack",
+      "type": "resources",
+      "uuid": "e3f4a5b6-7c8d-49e0-91f2-1a2b3c4d5e6f",
+      "version": [1, 1, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "6a434771-87bf-4f6d-927e-8c3e6205d1a8",
+      "version": [1, 1, 0]
+    }
+  ],
+  "metadata": {
+    "product_type": "addon"
+  }
+}

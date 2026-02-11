@@ -1,0 +1,32 @@
+{
+    "format_version": "1.21.40",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ulkd_ess:water_bucket"
+        },
+        "components": {
+            "minecraft:max_stack_size": 1,
+            "minecraft:display_name": {
+                "value": "Big Water Bucket"
+            },
+            "minecraft:icon": "unlinked.essentials:bucket_water",
+            "minecraft:durability": {
+                "max_durability": 30000,
+                "damage_chance": {
+                    "min": 0,
+                    "max": 1
+                }
+            },
+            "minecraft:tags": {
+                "tags": [
+                    "ulkd_ess:liquid_minecraft:water",
+                    "ulkd_ess:place_liquid_minecraft:flowing_water"
+                ]
+            },
+            "minecraft:custom_components": [
+                "ulkd_ess:big_bucket",
+                "ulkd_ess:no_attack_durability"
+            ]
+        }
+    }
+}

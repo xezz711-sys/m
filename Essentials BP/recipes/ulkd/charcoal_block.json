@@ -1,0 +1,25 @@
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:charcoal_block"
+		},
+		"key": {
+			"X": "minecraft:charcoal"
+		},
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:charcoal_block",
+				"count": 1
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

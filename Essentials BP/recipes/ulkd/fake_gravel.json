@@ -1,0 +1,26 @@
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:fake.gravel"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:gravel"
+		},
+		"pattern": [
+			"X X",
+			" X ",
+			"X X"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:fake.gravel",
+				"count": 2
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}

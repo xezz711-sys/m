@@ -1,0 +1,28 @@
+{
+	"format_version": "1.19.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ulkd_ess:measuring_tape"
+		},
+		"priority": 2,
+		"key": {
+			"X": "minecraft:iron_ingot",
+			"Y": "minecraft:ender_eye",
+			"Z": "minecraft:string"
+		},
+		"pattern": [
+			"YZX",
+			"XZX",
+			"XZY"
+		],
+		"result": [
+			{
+				"item": "ulkd_ess:measuring_tape",
+				"count": 1
+			}
+		],
+		"tags": [
+			"crafting_table"
+		]
+	}
+}
