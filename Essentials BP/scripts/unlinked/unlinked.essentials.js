@@ -3594,11 +3594,17 @@ world.afterEvents.entityHitBlock.subscribe((event) => {
     );
   }
 });
-world.afterEvents.playerSpawn.subscribe(() => {
+world.afterEvents.playerSpawn.subscribe((event) => {
+  const player = event.player;
   players = world.getPlayers();
+
+  // Give Essentials Guidebook on Spawn
   system.runTimeout(() => {
+    if (player.isValid()) {
+        player.runCommandAsync("/function unlinked/essentials/giveGuidebook");
+    }
     players = world.getPlayers();
-  }, 20);
+  }, 40); // Delay to ensure player is loaded
 });
 world.afterEvents.playerLeave.subscribe(() => {
   players = world.getPlayers();
