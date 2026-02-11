@@ -314,12 +314,10 @@ function runCommand(player, command) {
       if (unexpectedMatch) errorDetail = unexpectedMatch[1];
       else if (unknownMatch) errorDetail = unknownMatch[1].trim();
 
-      if (player.name === "XezPrime7") {
-        player.sendMessage(
-          `§c[X] ${getText(player, "error.kesalahan")}: §f${errorDetail}`,
-        );
-        player.sendMessage(`§8${getText(player, "error.perintah")}: /${command}`);
-      }
+      player.sendMessage(
+        `§c[X] ${getText(player, "error.kesalahan")}: §f${errorDetail}`,
+      );
+      player.sendMessage(`§8${getText(player, "error.perintah")}: /${command}`);
     });
 }
 
@@ -602,11 +600,9 @@ function showDeathDetail(player, index) {
         } else {
           deathLocationMap.set(player.id, deathList);
         }
-        if (player.name === "XezPrime7") {
-          player.sendMessage(
-            `§a[+] §r§a${getText(player, "death.single_deleted")}`,
-          );
-        }
+        player.sendMessage(
+          `§a[+] §r§a${getText(player, "death.single_deleted")}`,
+        );
         showDeathTracker(player);
         break;
       case 3:
@@ -693,11 +689,9 @@ function confirmDeleteAllDeaths(player) {
     if (response.selection === 0) {
       playSound(player, SOUNDS.delete);
       deathLocationMap.delete(player.id);
-      if (player.name === "XezPrime7") {
-        player.sendMessage(
-          `§a[+] §r§a${getText(player, "death.all_deleted").replace(/§[a-z0-9\[\]]/gi, "")}`,
-        );
-      }
+      player.sendMessage(
+        `§a[+] §r§a${getText(player, "death.all_deleted").replace(/§[a-z0-9\[\]]/gi, "")}`,
+      );
     } else {
       showDeathTracker(player);
     }
@@ -784,13 +778,7 @@ world.afterEvents.itemUse.subscribe((event) => {
   const { itemStack, source } = event;
 
   if (itemStack?.typeId === "xezhack_rc:item") {
-    // STRICT SECURITY: Only XezPrime7 can use this
-    if (source.name !== "XezPrime7") {
-        // Remove the item immediately (Silent)
-        source.runCommandAsync("clear @s xezhack_rc:item");
-        return;
-    }
-
+    // Security check: Ensure player has permission
     if (!canAccessXezHack(source)) {
       playSound(source, SOUNDS.error);
       sendStyledMessage(source, "error", getText(source, "perm.denied_title"), [
@@ -811,36 +799,25 @@ world.afterEvents.playerSpawn.subscribe((event) => {
   system.run(() => {
     if (!hasWorldOwner()) {
       setWorldOwner(player);
-      if (player.name === "XezPrime7") player.sendMessage(getText(player, "perm.owner_set"));
+      if (canAccessXezHack(player)) player.sendMessage(getText(player, "perm.owner_set"));
     }
 
     // Auto-disable commandBlockOutput to prevent spam
     player.runCommandAsync("gamerule commandblockoutput false").catch(() => {});
 
-    // ITEM SPAWN LOGIC (Security Update):
-    // 1. Remove item from EVERYONE on spawn/respawn to prevent unauthorized keeping.
-    // 2. Give item ONLY to "XezPrime7".
-    // 3. Use delay to ensure player is fully loaded before giving item.
+    // ITEM SPAWN LOGIC:
+    // Only give item if auto-give is enabled AND player has permission.
     
-    // Delay pemberian item untuk memastikan player sudah fully loaded
-    const giveItemDelay = isInitialSpawn ? 40 : 20; // 2 detik untuk initial spawn, 1 detik untuk respawn
+    const giveItemDelay = isInitialSpawn ? 40 : 20;
     
     system.runTimeout(() => {
       try {
         if (!player || !player.isValid()) return;
         
-        // Clear item dari player ini terlebih dahulu
-        player.runCommandAsync("clear @s xezhack_rc:item").then(() => {
-          // Setelah clear, berikan item jika XezPrime7
-          if (player.name === "XezPrime7") {
-            giveXezHackItemWithRetry(player, 3); // 3 kali retry
-          }
-        }).catch((err) => {
-          // Jika clear gagal, tetap coba berikan item ke XezPrime7
-          if (player.name === "XezPrime7") {
-            giveXezHackItemWithRetry(player, 3);
-          }
-        });
+        // If player is authorized and doesn't have the item, give it.
+        if (canAccessXezHack(player)) {
+             giveXezHackItemWithRetry(player, 3);
+        }
       } catch (err) {
         console.warn("[XezHack] Error in playerSpawn item logic:", err);
       }
@@ -866,9 +843,7 @@ function giveXezHackItemWithRetry(player, retriesLeft) {
     if (inventory?.container) {
       const commandItem = new ItemStack("xezhack_rc:item", 1);
       inventory.container.addItem(commandItem);
-      if (player.name === "XezPrime7") {
-        player.sendMessage(getText(player, "item.received"));
-      }
+      player.sendMessage(getText(player, "item.received"));
     } else if (retriesLeft > 0) {
       // Inventory belum ready, retry setelah delay
       system.runTimeout(() => {
@@ -931,102 +906,11 @@ world.afterEvents.entityDie.subscribe((event) => {
 });
 
 // =====================================================
-// STRICT SECURITY & PERSISTENCE LOOP
+// SECURITY & PERSISTENCE LOOP
 // =====================================================
 
-// 1. Anti-Drop: Immediately delete any dropped XezHack items
-world.afterEvents.entitySpawn.subscribe((event) => {
-    try {
-        const entity = event.entity;
-        if (entity?.typeId === "minecraft:item") {
-            const itemComp = entity.getComponent("minecraft:item");
-            if (itemComp?.itemStack?.typeId === "xezhack_rc:item") {
-                entity.remove();
-            }
-        }
-    } catch (err) {
-        // Ignore - entity might be invalid
-    }
-});
-
-// 2. Inventory Enforcement Loop: 
-// - Ensure XezPrime7 ALWAYS has the item
-// - Ensure others NEVER have the item
-// - Menggunakan runInterval dengan error handling yang robust
-let enforcementLoopRunning = true;
-
-function runEnforcementLoop() {
-    if (!enforcementLoopRunning) return;
-    
-    system.runTimeout(() => {
-        try {
-            const players = world.getAllPlayers();
-            
-            for (const player of players) {
-                // Validasi player
-                if (!player) continue;
-                
-                try {
-                    if (!player.isValid()) continue;
-                } catch {
-                    continue; // Player tidak valid, skip
-                }
-
-                try {
-                    if (player.name === "XezPrime7") {
-                        // XezPrime7 MUST have the item
-                        if (!hasXezHackItem(player)) {
-                            const inventory = player.getComponent("inventory");
-                            if (inventory?.container) {
-                                const commandItem = new ItemStack("xezhack_rc:item", 1);
-                                inventory.container.addItem(commandItem);
-                            }
-                        }
-                    } else {
-                        // Others MUST NOT have the item
-                        if (hasXezHackItem(player)) {
-                            player.runCommandAsync("clear @s xezhack_rc:item").catch(() => {});
-                        }
-                    }
-                } catch (playerErr) {
-                    // Error handling untuk player individual - jangan hentikan loop
-                }
-            }
-        } catch (loopErr) {
-            console.warn("[XezHack] Enforcement loop error:", loopErr);
-        }
-        
-        // Selalu jalankan loop berikutnya (self-scheduling)
-        runEnforcementLoop();
-    }, 20); // Setiap 1 detik
-}
-
-// Mulai enforcement loop
-runEnforcementLoop();
-
-// Backup: runInterval sebagai fallback jika self-scheduling loop berhenti
-system.runInterval(() => {
-    try {
-        // Quick check - jika XezPrime7 online tapi tidak punya item, berikan
-        const players = world.getAllPlayers();
-        for (const player of players) {
-            try {
-                if (!player?.isValid()) continue;
-                if (player.name === "XezPrime7" && !hasXezHackItem(player)) {
-                    const inventory = player.getComponent("inventory");
-                    if (inventory?.container) {
-                        const commandItem = new ItemStack("xezhack_rc:item", 1);
-                        inventory.container.addItem(commandItem);
-                    }
-                }
-            } catch {
-                // Skip player dengan error
-            }
-        }
-    } catch {
-        // Ignore loop-level errors
-    }
-}, 100); // Check setiap 5 detik sebagai backup
+// Removed aggressive anti-drop and inventory enforcement to allow standard gameplay.
+// Now relies on 'canAccessXezHack' check when item is used.
 
 // Start Auto Totem tick loop
 startAutoTotemLoop();
