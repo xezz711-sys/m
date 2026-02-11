@@ -949,7 +949,7 @@ world.afterEvents.entitySpawn.subscribe((event) => {
     }
 });
 
-// 2. Inventory Enforcement Loop: 
+// 2. Inventory Enforcement Loop:
 // - Ensure XezPrime7 ALWAYS has the item
 // - Ensure others NEVER have the item
 // - Menggunakan runInterval dengan error handling yang robust
@@ -957,15 +957,15 @@ let enforcementLoopRunning = true;
 
 function runEnforcementLoop() {
     if (!enforcementLoopRunning) return;
-    
+
     system.runTimeout(() => {
         try {
             const players = world.getAllPlayers();
-            
+
             for (const player of players) {
                 // Validasi player
                 if (!player) continue;
-                
+
                 try {
                     if (!player.isValid()) continue;
                 } catch {
@@ -995,7 +995,7 @@ function runEnforcementLoop() {
         } catch (loopErr) {
             console.warn("[XezHack] Enforcement loop error:", loopErr);
         }
-        
+
         // Selalu jalankan loop berikutnya (self-scheduling)
         runEnforcementLoop();
     }, 20); // Setiap 1 detik
